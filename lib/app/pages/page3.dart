@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'page1.dart';
-
 class Page3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -22,15 +20,17 @@ class Page3 extends StatelessWidget {
                   context,
                   '/',
                 );
-
-                // Navigator.pushReplacement(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => Page1(),
-                //   ),
-                // );
               },
               child: Text('Go to page 1'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  '/',
+                );
+              },
+              child: Text('Go to page 1 without closing page 3'),
             ),
           ],
         ),

@@ -23,12 +23,6 @@ class Page1 extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, '/page2',
                       arguments: 'Veio da página 1');
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => Page2(),
-                  //   ),
-                  // );
                 },
                 child: Text('Go to page 2'),
               ),
