@@ -18,12 +18,17 @@ class Page3 extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.popUntil(context, (route) => route.isFirst);
-                Navigator.pushReplacement(
+                Navigator.pushReplacementNamed(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => Page1(),
-                  ),
+                  '/',
                 );
+
+                // Navigator.pushReplacement(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => Page1(),
+                //   ),
+                // );
               },
               child: Text('Go to page 1'),
             ),

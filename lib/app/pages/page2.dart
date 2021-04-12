@@ -17,12 +17,13 @@ class Page2 extends StatelessWidget {
             Text('Page 2'),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Page3(),
-                  ),
-                );
+                Navigator.pushNamed(context, '/page3');
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => Page3(),
+                //   ),
+                // );
               },
               child: Text('Go to page 3'),
             ),
