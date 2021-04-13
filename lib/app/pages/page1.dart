@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'page2.dart';
-
 class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        return Future.value(false);
+        if (!Navigator.canPop(context)) return Future.value(false);
+
+        return Future.value(true);
       },
       child: Scaffold(
         appBar: AppBar(
@@ -21,7 +21,8 @@ class Page1 extends StatelessWidget {
               Text('Page 1'),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/page2');
+                  Navigator.pushNamed(context, '/page2',
+                      arguments: 'Veio da página 1');
                   // Navigator.push(
                   //   context,
                   //   MaterialPageRoute(

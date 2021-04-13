@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'page3.dart';
-
 class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final String args = ModalRoute.of(context).settings.arguments ?? '';
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Page 2'),
@@ -15,6 +15,10 @@ class Page2 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Page 2'),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(args),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/page3');
